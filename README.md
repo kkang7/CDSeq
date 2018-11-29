@@ -9,4 +9,4 @@ This is the MATLAB code for computational deconvolution method CDSeq.
 Reference: A novel computational complete deconvolution method using RNA-seq data (submitted)
 Authors: Kai Kang, Qian Meng, Igor Shats, David Umbach, Melissa Li, Yuanyuan Li, Xiaoling Li, Leping Li.
 
-Affiliation: National Institute of Environmental Health Sciences
+Affiliation: National Institute of Environmental Health Sciences, Biostatistics and Computational Biology Branch and Signal Transduciton Lab.
