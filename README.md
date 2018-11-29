@@ -1,7 +1,7 @@
 # CDSeq_011
 CDSeq MATLAB code version 0.1.1
 
-Free for academic use and educational use. Please contact me at kangkai0714@gmail.com for Commercial use. 
+Free for academic use and educational use. Please contact me at kangkai0714@gmail.com for commercial use. 
 
 
 This is the MATLAB code for computational deconvolution method CDSeq. 
