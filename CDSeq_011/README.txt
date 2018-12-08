@@ -64,6 +64,8 @@ Run the following to compile the c++ function in your MATLAB
 
 P.S. I will try to find a windows machine to compile and upload the compiled file later.
 
+PPS: I have compiled the c++ function on Windows machine. so there should be no problem with Windows users now.
+
 
 
 
