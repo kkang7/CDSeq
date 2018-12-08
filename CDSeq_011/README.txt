@@ -62,6 +62,9 @@ If you are using a Windows machine, you will need to compile the mex function be
 Run the following to compile the c++ function in your MATLAB 
 >>mex CDSeqGibbsSampler.cpp  
 
+If error pops up, mostly because MATLAB cannot find the c/c++ compiler. Follow the instruction in the error message to install
+the compiler, then run the mex function again.
+
 P.S. I will try to find a windows machine to compile and upload the compiled file later.
 
 PPS: I have compiled the c++ function on Windows machine. so there should be no problem with Windows users now.
