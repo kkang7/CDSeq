@@ -33,18 +33,19 @@ The following part contains the instructions for running CDSeq
 4. CDSeqGibbsSampler.mexa64    --- the linux-compiled Gibbs sampler function 
 5. CDSeqGibbsSampler.mexmaci64 --- the Mac-compiled Gibbs sampler function
 6. Combine_fastq.sh            --- the script for combining the fastq files(see DATA PROCESSING section)
-6. Demo.m                      --- the demo function that shows how to run the CDSeq software
-7. Fastq_process.sh            --- the script for processing fastq data(see DATA PROCESSING section)
-8. Mat2Vec.m                   --- convert matrix input to vector input
-9. RNA2Cell.m                  --- convert RNA proportions to cell proportions
-10.SyntheticMixtureData.mat    --- sample data to show the usage of CDSeq (see Demo.m)
-11.cokus.cpp                   --- random number generator
-12.ctrlcDetech.h               --- ctrl+c detector heaher file, but not working 
-13.gene2rpkm.m                 --- convert gene rate to RPKM normalization  
-14.logpost.m                   --- log posterior functin
-15.munkres.m                   --- munkres algorithm for cell type association
-16.read2gene.m                 --- convert read rate to gene rate
-
+7. Demo.m                      --- the demo function that shows how to run the CDSeq software
+8. Fastq_process.sh            --- the script for processing fastq data(see DATA PROCESSING section)
+9. Mat2Vec.m                   --- convert matrix input to vector input
+10. RNA2Cell.m                  --- convert RNA proportions to cell proportions
+11.SyntheticMixtureData.mat    --- sample data to show the usage of CDSeq (see Demo.m)
+12.cokus.cpp                   --- random number generator
+13.ctrlcDetech.h               --- ctrl+c detector heaher file, but not working 
+14.gene2rpkm.m                 --- convert gene rate to RPKM normalization  
+15.logpost.m                   --- log posterior functin
+16.munkres.m                   --- munkres algorithm for cell type association
+17.read2gene.m                 --- convert read rate to gene rate
+18.CDSeqGibbsSampler.mexw64.   --- Windows compiled Gibbs sampler function
+19.README.txt                  --- you are looking at it.
 
 ----------------- how to run CDSeq ---------------------
 open Demo.m and follow the options there
@@ -67,7 +68,7 @@ the compiler, then run the mex function again.
 
 P.S. I will try to find a windows machine to compile and upload the compiled file later.
 
-PPS: I have compiled the c++ function on Windows machine. so there should be no problem with Windows users now.
+P.P.S: I have compiled the c++ function on Windows machine. so there should be no problem with Windows users now.
 
 
 
