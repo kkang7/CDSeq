@@ -71,5 +71,10 @@ P.S. I will try to find a windows machine to compile and upload the compiled fil
 P.P.S: I have compiled the c++ function on Windows machine. so there should be no problem with Windows users now.
 
 
+---------------- Possible running errors --------------
+1. If you receive the following error on your data: 
+  Error using CDSeqGibbsSampler
+  GID and SID vectors should have same number of entries
+One possible reason is because the read count dataset is too big. To resolve this error, try to use the data-dilution strategy by dividing the dataset by a constant (say 100) and round to integer. 
 
 
