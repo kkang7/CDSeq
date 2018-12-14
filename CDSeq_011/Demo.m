@@ -1,7 +1,7 @@
 % Demo code for computational deconvolution method CDSeq
 % coder: Kai Kang
 % CDSeq version: 0.1.1
-% last updated: 11/29/2018
+% last updated: 12/14/2018
 %-------------------------------------------------------------------------
 % Reference: A novel computational complete deconvolution method using
 % RNA-seq data (submitted)
@@ -44,13 +44,14 @@
 % cell lines and 100 randomly chosen genes. they are 1)endothelial blood vessel, 
 % 2)breast epithelial carcinoma,  3)B lymphocyte, 4)CD14+ leukapheresis, 
 % 5)lung fibroblast, 6)normal breast.
-% B. gene_length      - the effective gene length of the 100 genes.
-% C. refGEP_readCount - the read counts data of the six pure cell lines and two randomly generated pseudo-cell-line expressions.
+% B. gene_length      - the effective gene length of the 100 genes
+% C. refGEP_readCount - the read counts data of the six pure cell lines
 % D. true_GEP_RPKM    - true RPKM gene expressions for the six pure cell lines
-% E. true_SSP         - true mixing proportions of the 40 mixture samples
+% E. true_SSP_CELL    - true cell proportions of the 40 mixture samples
 % F. true_GEP_read    - true read rate for six pure cell lines
 % G. true_GEP_gene    - true gene rate for six pure cell lines
-% H. theta            - true mixing proportions for the 40 samples
+% H. true_SSP_RNA     - true RNA proportions of the 40 mixture samples
+
 load SyntheticMixtureData.mat 
 
 %% ran CDSeq
@@ -73,16 +74,20 @@ for i=1:6
         k=k+1;
     end
 end
+
 % proportion estimation (red circles)
 figure
 k=1;
 for i=1:6
     for j=1:6
         subplot(6,6,k)
-        scatter(estprop(i,:),theta(j,:),5,'r'); hold on;
+        scatter(estprop(i,:),true_SSP_CELL(j,:),5,'r'); hold on;
+        plot([0 .5],[0 .5],'--k')
         k=k+1;
     end
 end
+
+
 %% case 2
 [estprop,estGEP,estT,logpost] = CDSeq(mydata, beta, alpha, T, N, gene_length);% estT will be equal to T when T is a scalar
 %%
@@ -102,7 +107,8 @@ k=1;
 for i=1:6
     for j=1:6
         subplot(6,6,k)
-        scatter(estprop(i,:),theta(j,:),5,'r'); hold on;
+        scatter(estprop(i,:),true_SSP_CELL(j,:),5,'r'); hold on;
+        plot([0 .5],[0 .5],'--k')
         k=k+1;
     end
 end
@@ -125,7 +131,8 @@ k=1;
 for i=1:6
     for j=1:6
         subplot(6,6,k)
-        scatter(estprop(i,:),theta(j,:),5,'r'); hold on;
+        scatter(estprop(i,:),true_SSP_CELL(j,:),5,'r'); hold on;
+        plot([0 .5],[0 .5],'--k')
         k=k+1;
     end
 end
@@ -149,7 +156,8 @@ k=1;
 for i=1:6
     for j=1:6
         subplot(6,6,k)
-        scatter(estprop(i,:),theta(j,:),5,'r'); hold on;
+        scatter(estprop(i,:),true_SSP_CELL(j,:),5,'r'); hold on;
+        plot([0 .5],[0 .5],'--k')
         k=k+1;
     end
 end
@@ -174,10 +182,75 @@ k=1;
 for i=1:6
     for j=1:6
         subplot(6,6,k)
-        scatter(estprop(i,:),theta(j,:),5,'r'); hold on;
+        scatter(estprop(i,:),true_SSP_CELL(j,:),5,'r'); hold on;
+        plot([0 .5],[0 .5],'--k')
         k=k+1;
     end
 end
+
+%% case 6 
+% test on the effect of sample size
+nn = 30; % sample size, small sample size may result in fuzzy estimations
+rand_sample = randperm(40);
+rand_sample = rand_sample(1:nn);
+mydata = mixture_samples(:,rand_sample);
+beta = .5;
+alpha = 5;
+%T = 6; 
+T = 2:8; % CDSeq will choose the most likely number of cell types
+N = 700;
+[estprop,estGEP,estT] = CDSeq(mydata, beta, alpha, T, N);% without given the gene_length the estGEP will be reported as read rate
+%%
+% GEP estimation (black circles)
+figure
+k=1;
+for i=1:estT
+    for j=1:6
+        subplot(estT,6,k)
+        scatter(estGEP(:,i),true_GEP_read(:,j),5,'k'); hold on;
+        k=k+1;
+    end
+end
+% proportion estimation (red circles)
+figure
+k=1;
+for i=1:estT
+    for j=1:6
+        subplot(estT,6,k)
+        scatter(estprop(i,:),true_SSP_CELL(j,rand_sample),5,'r'); hold on;
+        plot([0 .5],[0 .5],'--k')
+        k=k+1;
+    end
+end
+%% case 7 Quasi-unsupervised
+T=6;
+mydata_append = [mydata,floor(refGEP_readCount(:,1:6)/100)];
+[estprop,estGEP,estT,logpost,cell_type_assignment] = CDSeq(mydata_append, beta, alpha, T, N,gene_length,refGEP_readCount);
+
+%%
+% GEP estimation (black circles)
+true_SSP_CELL_append = [true_SSP_CELL eye(6)];
+figure
+k=1;
+for i=1:estT
+    for j=1:6
+        subplot(estT,6,k)
+        scatter(estGEP(:,i),true_GEP_RPKM(:,j),5,'k'); hold on;
+        k=k+1;
+    end
+end
+% proportion estimation (red circles)
+figure
+k=1;
+for i=1:estT
+    for j=1:6
+        subplot(estT,6,k)
+        scatter(estprop(i,:),true_SSP_CELL_append(j,:),5,'r'); hold on;
+        plot([0 .5],[0 .5],'--k')
+        k=k+1;
+    end
+end
+
 
 
 
