@@ -6,7 +6,7 @@ If you are experiencing some troubles or having some errors, please shoot me an 
 
 --------------------------------
 
-#How to use:
+# How to use:
 In Octave command window 
 1. Compile cpp file: (you need to compile the cpp file, the provided MATLAB compiled file may not work) 
 
