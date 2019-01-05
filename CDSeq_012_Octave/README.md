@@ -7,11 +7,11 @@ If you are still experiencing some troubles or having some errors, please shoot 
 
 #How to use:
 1. Compile cpp file: (you need to compile the cpp file, the provided MATLAB compiled file may not work) 
->>mkoctfile --mex -DMATLAB_MEX_FILE CDSeqGibbsSampler.cpp
+>> mkoctfile --mex -DMATLAB_MEX_FILE CDSeqGibbsSampler.cpp
 
 2. Install and load parallel package
->>pkg install -forge struct
->>pkg install -forge parallel
->>pkg load parallel
+>> pkg install -forge struct
+>> pkg install -forge parallel
+>> pkg load parallel
 
 3. Follow the examples in demo.m 
