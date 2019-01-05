@@ -9,7 +9,7 @@ If you are still experiencing some troubles or having some errors, please shoot 
 In Octave command window 
 1. Compile cpp file: (you need to compile the cpp file, the provided MATLAB compiled file may not work) 
 
->> mkoctfile --mex -DMATLAB_MEX_FILE CDSeqGibbsSampler.cpp
+mkoctfile --mex -DMATLAB_MEX_FILE CDSeqGibbsSampler.cpp
 
 2. Install and load parallel package
 
