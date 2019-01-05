@@ -2,7 +2,8 @@
 The code is modified for Octave users. 
 The only part that was modified was the parallel computing using multicore. Other parts remain the same.
 I did this pretty quickly, so it may have some bugs that I didn't realize. 
-If you are still experiencing some troubles or having some errors, please shoot me an email at kangkai0714@gmail.com
+If you are experiencing some troubles or having some errors, please shoot me an email at kangkai0714@gmail.com
+
 --------------------------------
 
 #How to use:
