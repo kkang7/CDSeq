@@ -100,7 +100,7 @@ if nargin==5
     mydata = round(mydata);
 end
 if nargin>=6
-    mydata = round(mydata/shrinker);
+    mydata = round(mydata/shrinker)+1;
 end
 N = ceil(N);
 
