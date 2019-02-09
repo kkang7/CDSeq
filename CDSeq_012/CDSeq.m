@@ -100,7 +100,7 @@ if nargin==5
     mydata = round(mydata);
 end
 if nargin>=6
-    mydata = round(mydata/shrinker)+1;
+    mydata = round(mydata/shrinker);
 end
 N = ceil(N);
 
@@ -121,7 +121,7 @@ SEED = 3;
 %==============================================================
 if nT==1
     if T<2, error('T, the number of cell types, has to be greater than 2');end
-
+    if nargout>5, error('Too many output. When T is a scalar, CDSeq outputs at most five outputs.');end
     printout = 1;
     [csGEP,ssp] = CDSeqGibbsSampler( GeneId , SampleId , T , N , alpha , beta , SEED, printout);
     tssp = transpose(ssp);
