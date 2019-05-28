@@ -18,4 +18,5 @@ Added data-dilution option to speed up the algorithm. We provided explaination i
 -----------------------------------------------
 # Data availability
 Experimental data GEO code: GSE123604
+
 The synthetic data (6 pure cell line GEPs) are available upon request since it is too large to put them on GitHub.
