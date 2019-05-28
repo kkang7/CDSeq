@@ -15,3 +15,7 @@ Affiliation: National Institute of Environmental Health Sciences, Biostatistics 
 -----------------------------------------------
 # CDSeq MATLAB code version 0.1.2
 Added data-dilution option to speed up the algorithm. We provided explaination in the manuscript which you can find on bioRxiv. Check out the demo.m in CDSeq_012 for details. 
+-----------------------------------------------
+# Data availability
+Experimental data GEO code: GSE123604
+The synthetic data (6 pure cell line GEPs) are available upon request since it is too large to put them on GitHub.
