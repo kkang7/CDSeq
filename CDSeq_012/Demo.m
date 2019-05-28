@@ -44,7 +44,7 @@
 %% load data
 % SyntheticMixtureData.mat contains the following variables
 % A. mixture_samples  - 40 mixture samples generated using six different pure
-% cell lines and 100 randomly chosen genes. they are 1)endothelial blood vessel, 
+% cell lines and 500 randomly chosen genes. they are 1)endothelial blood vessel, 
 % 2)breast epithelial carcinoma,  3)B lymphocyte, 4)CD14+ leukapheresis, 
 % 5)lung fibroblast, 6)normal breast.
 % B. gene_length      - the effective gene length of the 100 genes
