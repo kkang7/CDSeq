@@ -26,8 +26,9 @@ This version of CDSeq takes advantages of new MATLAB features (R2018a and later 
 which allows mex C++ function hanles unsigned short int type (2 bytes). 
 
 To compile CDSeq's C++ function, run the following to lines of commands in MATLAB: 
->>mex -setup C++ 
->>mex -R2018a CDSeqGibbsSampler.cpp
+mex -setup C++ 
+mex -R2018a CDSeqGibbsSampler.cpp
+
 -----------------------------------------------
 # Data availability
 Experimental data GEO code: GSE123604
