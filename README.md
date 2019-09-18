@@ -16,6 +16,19 @@ Affiliation: National Institute of Environmental Health Sciences, Biostatistics 
 # CDSeq MATLAB code version 0.1.2
 Added data-dilution option to speed up the algorithm. We provided explaination in the manuscript which you can find on bioRxiv. Check out the demo.m in CDSeq_012 for details. 
 -----------------------------------------------
+# CDSeq MATLAB code version 0.1.4
+updates:
+1. I used unsigned short integer types for large vectors to save memory cost.
+2. I added binary search (time complexity O(log T)) for cell type assignment. In early version, it was linear search (time complexity O(T)). 
+
+note:
+This version of CDSeq takes advantages of new MATLAB features (R2018a and later versions) 
+which allows mex C++ function hanles unsigned short int type (2 bytes). 
+
+To compile CDSeq's C++ function, run the following to lines of commands in MATLAB: 
+>>mex -setup C++ 
+>>mex -R2018a CDSeqGibbsSampler.cpp
+-----------------------------------------------
 # Data availability
 Experimental data GEO code: GSE123604
 
