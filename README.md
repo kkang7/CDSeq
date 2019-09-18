@@ -25,7 +25,7 @@ note:
 This version of CDSeq takes advantages of new MATLAB features (R2018a and later versions) 
 which allows mex C++ function hanles unsigned short int type (2 bytes). 
 
-To compile CDSeq's C++ function, run the following to lines of commands in MATLAB: 
+To compile CDSeq's C++ function, run the following two lines of commands in MATLAB: 
 
 mex -setup C++ 
 
