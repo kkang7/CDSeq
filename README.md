@@ -25,7 +25,7 @@ updates:
 
 note:
 This version of CDSeq takes advantages of new MATLAB features (R2018a and later versions) 
-which allows mex C++ function hanles unsigned short int type (2 bytes). 
+which allows mex C++ function handles unsigned short int type (2 bytes). 
 
 I only compiled the code on Mac and Linux but not Windows yet. Will find a windows machine to compile later. You can also compile by yourself following the instructions below.
 
