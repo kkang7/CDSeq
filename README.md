@@ -20,8 +20,8 @@ Added data-dilution option to speed up the algorithm. We provided explaination i
 -----------------------------------------------
 # CDSeq MATLAB code version 0.1.4
 updates:
-1. I used unsigned short integer types for large vectors to save memory cost.
-2. I added binary search for cell type assignment. In early version, it was linear search. 
+1. I used unsigned short integer types for large vectors to lower memory cost.
+2. I added binary search for cell type assignment procedure in Gibbs Sampler. In early version, it was done using linear search. 
 
 note:
 This version of CDSeq takes advantages of new MATLAB features (R2018a and later versions) 
