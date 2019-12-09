@@ -1,7 +1,7 @@
 %%
 % CDseq: A novel computational complete deconvolution method using bulk RNA-seq 
 % coder: Kai Kang
-% version: 0.1.3
+% version: 0.1.4
 % last updated: 08/15/2019
 %========================================================
 % Major changes: modified Mat2Vec.m function to dynamically allocate 
