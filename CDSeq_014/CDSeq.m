@@ -4,7 +4,7 @@
 % version: 0.1.4
 % last updated: 08/15/2019
 %========================================================
-% Major changes: modified Mat2Vec.m function to dynamically allocate 
+% Major changes: modified Mat2Vec.m function to use int16 allocate 
 % memoery for the vector to save memory cost
 % also in CDSeqGibbsSampler.cpp, I did the similar changes in allocating 
 % memory for the long vector
