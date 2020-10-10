@@ -1,6 +1,9 @@
 # CDSeq: A complete deconvolution method for dissecting tissue heterogeneity
 CDSeq is able to estimate both cell-type-specific gene expression profiles and sample-specific cell-type proportions simultaneously using bulk RNA-seq data.  
 
+# CDSeq R Package:
+We have an R package now and implemented some new functions
+https://github.com/kkang7/CDSeq_R_Package 
 ----------------------------------------------
 # CDSeq MATLAB code version 0.1.1
 
